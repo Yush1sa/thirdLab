@@ -52,14 +52,14 @@ namespace thirdLab.Tests
             var Vector1 = new Vector(3, 5, 7);
             var Vector2 = new Vector(1, 2, 3);
             var Vector0 = Vector1 & Vector2;
-            Assert.AreEqual("Скалярное произведение: 34", Vector0);
+            Assert.AreEqual(34, Vector0);
         }
 
         [TestMethod()]
         public void CalculationLengthTest()
         {
             var Vector1 = new Vector(3, 4, 0);
-            Assert.AreEqual("Длина вектора: 5", Vector1.CalcLength());
+            Assert.AreEqual(5, Vector1.CalcLength());
         }
 
       

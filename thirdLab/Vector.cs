@@ -35,12 +35,11 @@ namespace thirdLab
 
         }
 
-        public static string operator&(Vector a, Vector b) { //поменять на число
-            return String.Format("Скалярное произведение: {0}", a.x * b.x + a.y * b.y + a.z * b.z);
+        public static double operator&(Vector a, Vector b) {
+            return a.x * b.x + a.y * b.y + a.z * b.z;
         }
-        public string CalcLength() { // поменять на число
-            double length = Math.Sqrt(Math.Pow(this.x, 2) + Math.Pow(this.y, 2) + Math.Pow(this.z, 2));
-            return String.Format("Длина вектора: {0}", length);
+        public double CalcLength() {
+            return Math.Sqrt(Math.Pow(this.x, 2) + Math.Pow(this.y, 2) + Math.Pow(this.z, 2));
         }
         
     }

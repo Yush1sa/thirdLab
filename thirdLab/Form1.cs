@@ -15,8 +15,8 @@ namespace thirdLab
                 var firstVector = new Vector(double.Parse(FirstVecX.Text), double.Parse(FirstVecY.Text), double.Parse(FirstVecZ.Text));
                 var secondVector = new Vector(double.Parse(SecondVecX.Text), double.Parse(SecondVecY.Text), double.Parse(SecondVecZ.Text));
 
-                LenFirstVec.Text = firstVector.CalcLength();
-                LenSecondVec.Text = secondVector.CalcLength();
+                LenFirstVec.Text = String.Format("ƒлина вектора: {0}", firstVector.CalcLength());
+                LenSecondVec.Text = String.Format("ƒлина вектора: {0}", secondVector.CalcLength());
 
                 string resultVector;
 
@@ -32,7 +32,7 @@ namespace thirdLab
                         resultVector = (firstVector * secondVector).Show();
                         break;
                     case "&":
-                        resultVector = firstVector & secondVector;
+                        resultVector = String.Format("—кал€рное произведение: {0}", firstVector & secondVector);
                         break;
                     default:
                         resultVector = (firstVector + secondVector).Show();
