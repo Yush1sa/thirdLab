@@ -22,17 +22,16 @@ namespace thirdLab
             return String.Format("Вектор: ({0}, {1}, {2})", this.x, this.y, this.z);
         }
 
-        public static Vector operator+(Vector a, Vector b) {
-            return new Vector(a.x+b.x, a.y+b.y, a.z+b.z);
+        public static string operator+(Vector a, Vector b) {
+            return new Vector(a.x+b.x, a.y+b.y, a.z+b.z).Show();
         }
 
-        public static Vector operator-(Vector a, Vector b) {
-            return new Vector(a.x - b.x, a.y - b.y, a.z - b.z);
+        public static string operator-(Vector a, Vector b) {
+            return new Vector(a.x - b.x, a.y - b.y, a.z - b.z).Show();
         }
 
-        public static Vector operator *(Vector a, Vector b) {
-            return new Vector(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
-
+        public static string operator *(Vector a, Vector b) {
+            return new Vector(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x).Show();
         }
 
         public static string operator&(Vector a, Vector b) {
