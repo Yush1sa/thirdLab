@@ -8,40 +8,40 @@ namespace thirdLab
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Calculate()
         {
-            try { 
-            var firstVector = new Vector(double.Parse(FirstVecX.Text), double.Parse(FirstVecY.Text), double.Parse(FirstVecZ.Text));
-            var secondVector = new Vector(double.Parse(SecondVecX.Text), double.Parse(SecondVecY.Text), double.Parse(SecondVecZ.Text));
-
-            string resultVector;
-
-            switch (cmbOperation.Text)
+            try
             {
-                case "+":
-                    resultVector = firstVector + secondVector;
-                    break;
-                case "-":
-                    resultVector = firstVector - secondVector;
-                    break;
-                case "*":
-                    resultVector = firstVector * secondVector;
-                    break;
-                case "&":
-                    resultVector = firstVector & secondVector;
-                    break;
-                default:
-                    resultVector = firstVector + secondVector;
-                    break;
+                var firstVector = new Vector(double.Parse(FirstVecX.Text), double.Parse(FirstVecY.Text), double.Parse(FirstVecZ.Text));
+                var secondVector = new Vector(double.Parse(SecondVecX.Text), double.Parse(SecondVecY.Text), double.Parse(SecondVecZ.Text));
+
+                LenFirstVec.Text = firstVector.CalcLength();
+                LenSecondVec.Text = secondVector.CalcLength();
+
+                string resultVector;
+
+                switch (cmbOperation.Text)
+                {
+                    case "+":
+                        resultVector = (firstVector + secondVector).Show();
+                        break;
+                    case "-":
+                        resultVector = (firstVector - secondVector).Show();
+                        break;
+                    case "*":
+                        resultVector = (firstVector * secondVector).Show();
+                        break;
+                    case "&":
+                        resultVector = firstVector & secondVector;
+                        break;
+                    default:
+                        resultVector = (firstVector + secondVector).Show();
+                        break;
+                }
+                result.Text = resultVector;
             }
-            result.Text = resultVector;
-            }
-            catch (FormatException) {
+            catch (FormatException)
+            {
                 return;
             }
         }
