@@ -51,7 +51,8 @@ namespace thirdLab.Tests
         {
             var Vector1 = new Vector(3, 5, 7);
             var Vector2 = new Vector(1, 2, 3);
-            Assert.AreEqual("Скалярное произведение: 34", Vector.ScalarMul(Vector1, Vector2));
+            var Vector0 = Vector1 & Vector2;
+            Assert.AreEqual("Скалярное произведение: 34", Vector0);
         }
 
         [TestMethod()]

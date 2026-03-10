@@ -35,7 +35,7 @@ namespace thirdLab
 
         }
 
-        public static string ScalarMul(Vector a, Vector b) {
+        public static string operator&(Vector a, Vector b) {
             return String.Format("Скалярное произведение: {0}", a.x * b.x + a.y * b.y + a.z * b.z);
         }
         public string CalcLength() {
