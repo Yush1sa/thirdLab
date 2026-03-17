@@ -47,9 +47,9 @@ namespace thirdLab
         public override bool Equals(object? obj)
         {
             
-            if (obj == null) return false;
+            if (obj == null && !(obj is Vector)) return false;
 
-            Vector other = (Vector)obj;
+            Vector other = obj as Vector;
 
             return x ==other.x && y == other.y && z == other.z;
         }
