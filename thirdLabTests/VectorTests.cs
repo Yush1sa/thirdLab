@@ -15,7 +15,7 @@ namespace thirdLab.Tests
         public void ShowTest()
         {
             var Vector1 = new Vector(3, 5, 7);
-            Assert.AreEqual("Вектор: (3, 5, 7)", Vector1.Show());
+            Assert.AreEqual("Вектор: (3, 5, 7)", Vector1.ToString());
         }
 
 
@@ -25,7 +25,8 @@ namespace thirdLab.Tests
             var Vector1 = new Vector(3, 5, 7);
             var Vector2 = new Vector(1, 2, 3);
             var Vector0 = Vector1 + Vector2;
-            Assert.AreEqual("Вектор: (4, 7, 10)", Vector0.Show());
+            Vector Answer = new Vector(4, 7, 10);
+            Assert.AreEqual(Answer, Vector0);
         }
 
         [TestMethod()]
@@ -34,7 +35,8 @@ namespace thirdLab.Tests
             var Vector1 = new Vector(3, 5, 7);
             var Vector2 = new Vector(1, 2, 3);
             var Vector0 = Vector1 - Vector2;
-            Assert.AreEqual("Вектор: (2, 3, 4)", Vector0.Show());
+            Vector Answer = new Vector(2, 3, 4);
+            Assert.AreEqual(Answer, Vector0);
         }
 
         [TestMethod()]
@@ -43,7 +45,8 @@ namespace thirdLab.Tests
             var Vector1 = new Vector(3, 5, 7);
             var Vector2 = new Vector(1, 2, 3);
             var Vector0 = Vector1 * Vector2;
-            Assert.AreEqual("Вектор: (1, -2, 1)", Vector0.Show());
+            Vector Answer = new Vector(1, -2, 1);
+            Assert.AreEqual(Answer, Vector0);
         }
 
         [TestMethod()]
@@ -59,7 +62,7 @@ namespace thirdLab.Tests
         public void CalculationLengthTest()
         {
             var Vector1 = new Vector(3, 4, 0);
-            Assert.AreEqual(5, Vector1.CalcLength());
+            Assert.AreEqual(5, Vector1.Length());
         }
 
       

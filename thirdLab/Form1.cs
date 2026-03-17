@@ -15,27 +15,27 @@ namespace thirdLab
                 var firstVector = new Vector(double.Parse(FirstVecX.Text), double.Parse(FirstVecY.Text), double.Parse(FirstVecZ.Text));
                 var secondVector = new Vector(double.Parse(SecondVecX.Text), double.Parse(SecondVecY.Text), double.Parse(SecondVecZ.Text));
 
-                LenFirstVec.Text = String.Format("ƒлина вектора: {0}", firstVector.CalcLength());
-                LenSecondVec.Text = String.Format("ƒлина вектора: {0}", secondVector.CalcLength());
+                LenFirstVec.Text = String.Format("ƒлина вектора: {0}", firstVector.Length());
+                LenSecondVec.Text = String.Format("ƒлина вектора: {0}", secondVector.Length());
 
                 string resultVector;
 
                 switch (cmbOperation.Text)
                 {
                     case "+":
-                        resultVector = (firstVector + secondVector).Show();
+                        resultVector = (firstVector + secondVector).ToString();
                         break;
                     case "-":
-                        resultVector = (firstVector - secondVector).Show();
+                        resultVector = (firstVector - secondVector).ToString();
                         break;
                     case "*":
-                        resultVector = (firstVector * secondVector).Show();
+                        resultVector = (firstVector * secondVector).ToString();
                         break;
                     case "&":
                         resultVector = String.Format("—кал€рное произведение: {0}", firstVector & secondVector);
                         break;
                     default:
-                        resultVector = (firstVector + secondVector).Show();
+                        resultVector = (firstVector + secondVector).ToString();
                         break;
                 }
                 result.Text = resultVector;
